@@ -5,6 +5,7 @@ import { List, ListItem } from 'material-ui/List';
 import Avatar from 'material-ui/Avatar';
 
 import Loader from './Loader'
+import Facebook from '../components/Facebook';
 
 export default class UserSelection extends React.Component {
   constructor(props) {
@@ -48,7 +49,7 @@ export default class UserSelection extends React.Component {
 
     return (
       <Dialog
-        title="Pick your character."
+        title="Login"
         actions={actions}
         modal={false}
         open
@@ -58,9 +59,7 @@ export default class UserSelection extends React.Component {
           !this.state.availableUsers
             ? <Loader />
             : (
-              <List>
-                { this.renderUserItems() }
-              </List>
+              <Facebook/>
             )
         }
       </Dialog>
